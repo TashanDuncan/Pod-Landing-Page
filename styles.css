@@ -5,11 +5,23 @@
 body {
   background-color: #121212;
   position: relative;
+  margin: 0 auto;
 }
 
-.background-image{
-    filter: brightness(50%);
-    height: 100%;
-    width: 100%;
-    position: relative;
+.background-image {
+  filter: brightness(20%);
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.logo {
+  text-align: center;
+  padding: 62px 120px;
 }
