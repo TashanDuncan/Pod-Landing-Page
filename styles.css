@@ -57,9 +57,43 @@ p {
 .svg-logos{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+
 }
 
 .svg-logos img{
-  
+  height: 17px;
+  color: #121725;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 50px;
+  height: 46px;
+  border: none;
+}
+
+#email{
+ margin-bottom: 16px;
+ background-color: #2C344B;
+ text-indent: 32px;
+}
+
+#email::placeholder{
+  color: white;
+  opacity: 0.5;
+  font-weight: bold;
+}
+
+#submit{
+  background-color: #54E6AF;
+}
+
+input[value="Request Access"]{
+  color: #121725;
+  font-weight: bold;  
 }
