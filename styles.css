@@ -51,19 +51,28 @@ p {
   color: #C2CBE5;
   font-size: 15px;
   text-align: center;
-  line-height: 25px; 
+  line-height: 25px;
+  margin-bottom: 33px;
 }
 
 .svg-logos{
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  opacity:0.5;
+  max-height: 17px;
 }
 
 .svg-logos img{
-  height: 17px;
-  color: #121725;
+ height: 17px;
+}
+
+#google{
+  height: 11px;
+}
+
+#pocket{
+  height: 15px;
 }
 
 form {
@@ -79,6 +88,7 @@ input {
 
 #email{
  margin-bottom: 16px;
+ margin-top: 48px;
  background-color: #2C344B;
  text-indent: 32px;
 }
