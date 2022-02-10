@@ -1,5 +1,5 @@
-:root{
-  --main-color: #54e6af
+:root {
+  --main-color: #54e6af;
 }
 * {
   box-sizing: border-box;
@@ -13,9 +13,8 @@ body {
   margin: 0 auto;
 }
 
-.background-image {
-
-  filter:  brightness(10%);
+.background-image-mobile {
+  filter: brightness(10%);
   mix-blend-mode: screen;
   margin-left: auto;
   margin-right: auto;
@@ -27,12 +26,15 @@ body {
   width: 100vw;
   z-index: -1;
 }
+.background-image-tablet {
+  display: none;
+}
 
 .logo {
   text-align: center;
   padding: 62px 120px;
 }
-.main{
+.main {
   padding: 0 24px;
 }
 h1 {
@@ -44,34 +46,35 @@ h1 {
 }
 
 h1 span {
-  color: white
+  color: white;
 }
 
 p {
-  color: #C2CBE5;
+  opacity: 0.8;
+  color: #c2cbe5;
   font-size: 15px;
   text-align: center;
   line-height: 25px;
   margin-bottom: 33px;
 }
 
-.svg-logos{
+.svg-logos {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  opacity:0.5;
-  max-height: 17px;
+  opacity: 0.5;
+
 }
 
-.svg-logos img{
- height: 17px;
+.svg-logos img {
+  height: 17px;
 }
 
-#google{
+#google {
   height: 11px;
 }
 
-#pocket{
+#pocket {
   height: 15px;
 }
 
@@ -86,24 +89,123 @@ input {
   border: none;
 }
 
-#email{
- margin-bottom: 16px;
- margin-top: 48px;
- background-color: #2C344B;
- text-indent: 32px;
+#email {
+  margin-bottom: 16px;
+  margin-top: 48px;
+  background-color: #2c344b;
+  text-indent: 32px;
 }
 
-#email::placeholder{
+#email::placeholder {
   color: white;
   opacity: 0.5;
   font-weight: bold;
 }
 
-#submit{
-  background-color: #54E6AF;
+#submit {
+  background-color: var(--main-color);
 }
 
-input[value="Request Access"]{
+#submit:hover {
+  background-color: #b3ffe2;
+}
+
+input[value='Request Access'] {
   color: #121725;
-  font-weight: bold;  
+  font-weight: bold;
+}
+
+/* MEDIA Queries */
+
+@media only screen and (min-width: 768px) {
+  .background-image-mobile {
+    display: none;
+  }
+
+  .background-image-tablet {
+    display: block;
+    position: absolute;
+    right: 0%;
+    z-index: -1;
+  }
+
+  .logo {
+    text-align: left;
+    padding: 50px 0px 0px 39px;
+  }
+
+  .main {
+    background-color: #121725;
+    position: absolute;
+    width: 635px;
+    height: 509px;
+    left: 39px;
+    top: 258px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 48px;
+    margin: 0;
+    margin-top: 93px;
+  }
+  p {
+    font-size: 18px;
+    line-height: 25px;
+    margin-bottom: 40px;
+    width: 445px;
+  }
+
+  h1,
+  p {
+    text-align: left;
+  }
+
+  .svg-logos {
+    order: 1;
+  }
+  form {
+    width: 427px;
+  }
+  #email {
+    /* Tell the input to use all the available space */
+    flex-grow: 2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border: none;
+    margin: 0;
+  }
+
+  #email:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+
+  #submit {
+    position: absolute;
+    top: 62.5%;
+    right: 33.5%;
+    height: 40px;
+    width: 162px;
+
+  }
+  .svg-logos {
+    margin-top: 64px;
+    width: 536px;
+    opacity: 0.5;
+    max-height: 17px;
+    align-items: flex-end;
+  }
+
+  .svg-logos img {
+    height: 29px;
+  }
+
+  #google {
+    height: 100%;
+  }
+  #pocket{
+    height: 100%;
+  }
 }
