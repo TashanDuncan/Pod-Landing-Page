@@ -115,6 +115,10 @@ input[value='Request Access'] {
   font-weight: bold;
 }
 
+.dots{
+  display: none;
+}
+
 /* MEDIA Queries */
 
 @media only screen and (min-width: 768px) {
@@ -184,7 +188,7 @@ input[value='Request Access'] {
 
   #submit {
     position: absolute;
-    top: 62.5%;
+    top: 60%;
     right: 33.5%;
     height: 40px;
     width: 162px;
@@ -208,4 +212,16 @@ input[value='Request Access'] {
   #pocket{
     height: 100%;
   }
+
+  .dots{
+    display: block;
+    position: fixed;
+    bottom: 0px;
+    left: 30px;
+    z-index: 999;
+  }
+
+  @media only screen and (min-width: 1224px) {
+    
+    }
 }
