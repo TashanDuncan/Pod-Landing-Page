@@ -164,6 +164,7 @@ input[value='Request Access'] {
     margin: 0;
     margin-top: 93px;
     margin-bottom: 31px;
+    line-height: 56px;
   }
   p {
     font-size: 18px;
@@ -199,7 +200,7 @@ input[value='Request Access'] {
 
   #submit {
     position: absolute;
-    top: 66.5%;
+    top: 73.5%;
     right: 33.5%;
     height: 46px;
     width: 162px;
@@ -253,6 +254,11 @@ input[value='Request Access'] {
       left: 165px;
     }
 
+    h1 {
+      font-size: 52px;
+      line-height: 62px;
+    }
+
     .logo {
       padding: 102px 0px 0px 165px;
     }
@@ -262,6 +268,7 @@ input[value='Request Access'] {
     }
 
     #submit {
+      top: 75.8%;
       right: 41.5%;
     }
 
