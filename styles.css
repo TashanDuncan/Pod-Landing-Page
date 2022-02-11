@@ -97,7 +97,8 @@ input {
   text-indent: 32px;
 }
 
-#email, #email::placeholder {
+#email,
+#email::placeholder {
   color: white;
   font-weight: bold;
 }
@@ -120,6 +121,13 @@ input[value='Request Access'] {
   font-weight: bold;
 }
 
+.invalid {
+  font-size: 12px;
+  line-height: 14px;
+  color: #fb3e3e;
+  font-weight: bold;
+  margin-top: 8px;
+}
 /* MEDIA Queries */
 
 @media only screen and (min-width: 768px) {
@@ -239,7 +247,7 @@ input[value='Request Access'] {
       top: 130px;
     }
 
-    .main{
+    .main {
       width: 723px;
       top: 261px;
       left: 165px;
@@ -253,8 +261,12 @@ input[value='Request Access'] {
       top: 718px;
     }
 
-    #submit{
+    #submit {
       right: 41.5%;
+    }
+
+    .invalid {
+      margin-left: 32px;
     }
   }
 }
