@@ -26,7 +26,9 @@ body {
   width: 100vw;
   z-index: -1;
 }
-.background-image-tablet {
+.background-image-tablet,
+.background-image-desktop,
+.dots {
   display: none;
 }
 
@@ -63,7 +65,6 @@ p {
   align-items: center;
   justify-content: space-between;
   opacity: 0.5;
-
 }
 
 .svg-logos img {
@@ -96,10 +97,13 @@ input {
   text-indent: 32px;
 }
 
-#email::placeholder {
+#email, #email::placeholder {
   color: white;
-  opacity: 0.5;
   font-weight: bold;
+}
+
+#email::placeholder {
+  opacity: 0.5;
 }
 
 #submit {
@@ -108,15 +112,12 @@ input {
 
 #submit:hover {
   background-color: #b3ffe2;
+  cursor: pointer;
 }
 
 input[value='Request Access'] {
   color: #121725;
   font-weight: bold;
-}
-
-.dots{
-  display: none;
 }
 
 /* MEDIA Queries */
@@ -154,6 +155,7 @@ input[value='Request Access'] {
     font-size: 48px;
     margin: 0;
     margin-top: 93px;
+    margin-bottom: 31px;
   }
   p {
     font-size: 18px;
@@ -179,6 +181,7 @@ input[value='Request Access'] {
     /* And hide the input's outline, so the form looks like the outline */
     border: none;
     margin: 0;
+    height: 56px;
   }
 
   #email:focus {
@@ -188,18 +191,18 @@ input[value='Request Access'] {
 
   #submit {
     position: absolute;
-    top: 60%;
+    top: 66.5%;
     right: 33.5%;
-    height: 40px;
+    height: 46px;
     width: 162px;
-
   }
   .svg-logos {
     margin-top: 64px;
     width: 536px;
     opacity: 0.5;
-    max-height: 17px;
-    align-items: flex-end;
+    max-height: 29px;
+    align-content: center;
+    align-items: center;
   }
 
   .svg-logos img {
@@ -207,13 +210,13 @@ input[value='Request Access'] {
   }
 
   #google {
-    height: 100%;
+    height: 18px;
   }
-  #pocket{
-    height: 100%;
+  #pocket {
+    height: 26px;
   }
 
-  .dots{
+  .dots {
     display: block;
     position: fixed;
     bottom: 0px;
@@ -221,7 +224,37 @@ input[value='Request Access'] {
     z-index: 999;
   }
 
-  @media only screen and (min-width: 1224px) {
-    
+  @media only screen and (min-width: 1440px) {
+    .background-image-tablet {
+      display: none;
     }
+
+    .background-image-desktop {
+      display: block;
+      z-index: -1;
+      position: absolute;
+      width: 888px;
+      height: 640px;
+      left: 552px;
+      top: 130px;
+    }
+
+    .main{
+      width: 723px;
+      top: 261px;
+      left: 165px;
+    }
+
+    .logo {
+      padding: 102px 0px 0px 165px;
+    }
+    .dots {
+      left: 1208px;
+      top: 718px;
+    }
+
+    #submit{
+      right: 41.5%;
+    }
+  }
 }
