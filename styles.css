@@ -122,11 +122,12 @@ input[value='Request Access'] {
 }
 
 .invalid {
+  position: absolute;
   font-size: 12px;
   line-height: 14px;
   color: #fb3e3e;
   font-weight: bold;
-  margin-top: 8px;
+  top: 101%;
 }
 /* MEDIA Queries */
 
@@ -227,10 +228,14 @@ input[value='Request Access'] {
 
   .dots {
     display: block;
-    position: fixed;
-    bottom: 0px;
-    left: 30px;
+    position: absolute;
+    top: 840%;
+    left: 3%;
     z-index: 999;
+  }
+
+  .invalid{
+    top: 85%;
   }
 
   @media only screen and (min-width: 1440px) {
@@ -273,6 +278,7 @@ input[value='Request Access'] {
     }
 
     .invalid {
+      top: 88%;
       margin-left: 32px;
     }
   }
